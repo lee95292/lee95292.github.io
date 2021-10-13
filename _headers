@@ -156,6 +156,15 @@
   Link: </component---src-templates-blog-tsx-239d4f3d65b78ce6a072.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/12/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/13
+  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
+  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
+  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
+  Link: </component---src-templates-blog-tsx-239d4f3d65b78ce6a072.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/13/page-data.json>; rel=preload; as=fetch; crossorigin
 /categories
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
@@ -471,6 +480,15 @@
   Link: </component---src-templates-tag-tsx-530e87b3b8e4915816fa.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/tags/traefik/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/kaggle-커널분석-notebook-마무리-house-price-prediction-3
+  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
+  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
+  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
+  Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/kaggle-커널분석-notebook-마무리-house-price-prediction-3/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/kaggle-커널분석-notebook-house-price-prediction-2
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
@@ -480,15 +498,6 @@
   Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/kaggle-커널분석-notebook-house-price-prediction-2/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/datascience-패키지-메서드-사용법-정리
-  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
-  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
-  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
-  Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/blog/datascience-패키지-메서드-사용법-정리/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/kaggle-커널분석-notebook-house-price-prediction
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
@@ -498,6 +507,15 @@
   Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/kaggle-커널분석-notebook-house-price-prediction/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/datascience-패키지-메서드-사용법-정리
+  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
+  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
+  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
+  Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/datascience-패키지-메서드-사용법-정리/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/데이터사이언스-링크-모음
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
@@ -516,15 +534,6 @@
   Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/k-8-s-secret-사용법-간단메모/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/blog-구현-todo
-  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
-  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
-  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
-  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
-  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
-  Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/blog/blog-구현-todo/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/pandas-기초-사용법
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
@@ -543,6 +552,15 @@
   Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/blog/traefik-오픈소스-네트워크-게이트웨이/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/blog-구현-todo
+  Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
+  Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
+  Link: </app-5965034eedea409f6dd2.js>; rel=preload; as=script
+  Link: </styles-e9d24b1846c7d6eb9685.js>; rel=preload; as=script
+  Link: </102dd505d877350578a7e7497b0704b624b1bad0-fea7ccd757b71a49b189.js>; rel=preload; as=script
+  Link: </component---src-templates-post-tsx-f185588c4e218dcddcf7.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/blog/blog-구현-todo/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/javascript-function-call-apply-bind-메서드
   Link: </webpack-runtime-718e5941a2526505bbbf.js>; rel=preload; as=script
   Link: </framework-5a1b297d9adac74fe592.js>; rel=preload; as=script
