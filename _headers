@@ -7,9 +7,9 @@
   Referrer-Policy: same-origin
 /component---cache-caches-gatsby-plugin-offline-app-shell-js-47a460e3899ed02c5561.js
   Cache-Control: public, max-age=31536000, immutable
-/styles.4ec2b9556ee2185d362b.css
+/styles.d6c1202e2fdd9f651b8b.css
   Cache-Control: public, max-age=31536000, immutable
-/8cfbd7c72448a1af00d3bdb88439087de6f95e4f-e065df0a815f3903c288.js
+/8cfbd7c72448a1af00d3bdb88439087de6f95e4f-9b5f65f833fa459e19c3.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-all-category-tsx-b89d1be5f02209da768c.js
   Cache-Control: public, max-age=31536000, immutable
@@ -29,7 +29,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-old-index-tsx-1f28b5acebf0797b2135.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-d4ce929c48a35aa42204.js
+/webpack-runtime-a095a21048c5b4d37e1d.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-f35b5241c0a6d55c76df.js
   Cache-Control: public, max-age=31536000, immutable
