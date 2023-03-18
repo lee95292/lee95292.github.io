@@ -126,9 +126,9 @@ data-styled.g19[id="Post__PostContent-sc-yg6lty-0"]{content:"jbFIsN,"}/*!sc*/
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Member</span><span class="token punctuation">{</span>
 	<span class="token keyword">private</span> <span class="token class-name">String</span> memberId<span class="token punctuation">;</span>
 	<span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
-	<span class="token keyword">private</span> <span class="token class-name">String</span> tel<span class="token punctuation">;</span> <span class="token comment">// 전화번호 필드 추가</span>
+	<span class="token keyword">private</span> <span class="token class-name">String</span> tel<span class="token punctuation">;</span> <span class="token comment">// !! 비즈니스 로직 변경으로 전화번호 필드 추가</span>
 <span class="token punctuation">}</span></code></pre></div>
-<p>데이터에서 하나의 필드(컬럼) 이 추가될 때, SQL을 직접 매핑해 개발하는 방식에서는 삽입,조회,변경,삭제 시 많은 코드 변경이 필요합니다.</p>
+<p>데이터에서 <strong>하나의 필드(컬럼) 이 추가될 때</strong>, SQL을 직접 매핑해 개발하는 방식에서는 삽입,조회,변경,삭제 시 <strong>많은 코드 변경이 필요합니다.</strong></p>
 <ul>
 <li>생성코드 변경:  SQL 수정 / Prepared Statement에 필드 추가하는 코드</li>
 </ul>
@@ -144,13 +144,13 @@ pstmt<span class="token punctuation">.</span><span class="token function">setStr
 member<span class="token punctuation">.</span><span class="token function">setTel</span><span class="token punctuation">(</span><span class="token string">"XXX"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <br>
 <ul>
-<li>연관객체 조회: Member가 Team이라는 연관된 데이터를 새로 개발하는 경우, member.getTeam().getTeamName()을 통해 멤버가 속한 팀을 가져오는 마법같은 일은 벌어지지 않습니다. DAO에서 SQL Join을  통해 다른 테이블을 연결해야 가능합니다.</li>
+<li>연관객체 조회: Member가 Team이라는 연관된 데이터를 새로 개발하는 경우, member.getTeam().getTeamName()을 통해 멤버가 속한 팀을 가져오는 마법같은 일은 벌어지지 않습니다. <strong>DAO에서 SQL Join을  통해 다른 테이블을 연결해야 가능합니다.</strong></li>
 </ul>
 <div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> M<span class="token punctuation">.</span>MEMBER_ID<span class="token punctuation">,</span> M<span class="token punctuation">.</span>NAME<span class="token punctuation">,</span> M<span class="token punctuation">.</span>TEL<span class="token punctuation">,</span> T<span class="token punctuation">.</span>TEAM_ID<span class="token punctuation">,</span> T<span class="token punctuation">.</span>TEAM_NAME 
 	<span class="token keyword">FROM</span> MEMBER M 
 	<span class="token keyword">JOIN</span> TEAM T <span class="token keyword">ON</span> M<span class="token punctuation">.</span>TEAM_ID <span class="token operator">=</span> T<span class="token punctuation">.</span>TEAM_ID</code></pre></div>
-<p>많은 비즈니스 로직에서 데이터 간 연관관계가 존재하는데, 위같이 SQL에 의존하는 개발을 하는 경우, “진정한 계층 분할이 어렵다”는 문제가 있습니다.</p>
-<p>DAO를 통해 데이터에 접근하는 로직만 분리했을 뿐이지, 필드를 추가할때만 해도 SQL과 CRUD와 관련된 코드를 추가해야하기 때문이다. 이때문에 엔티티를 신뢰할 수 없게됩니다.</p>
+<p>많은 비즈니스 로직에서 데이터 간 연관관계가 존재하는데, 위같이 SQL에 의존하는 개발을 하는 경우, <strong>진정한 계층 분할이 어렵다</strong>는 문제가 있습니다.</p>
+<p>DAO를 통해 데이터에 접근하는 로직만 분리했을 뿐이지, <strong>필드를 추가할때만 해도 SQL과 CRUD와 관련된 코드를 추가해야하기 때문</strong>입니다. 이때문에 엔티티를 신뢰할 수 없게됩니다.</p>
 <h3 id="jpa와-문제-해결" style="position:relative;"><a href="#jpa%EC%99%80-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0" aria-label="jpa와 문제 해결 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JPA와 문제 해결</h3>
 <p>JPA는 위에서 소개한 문제들을 효율적으로 해결합니다.</p>
 <ul>
@@ -160,9 +160,9 @@ member<span class="token punctuation">.</span><span class="token function">setTe
 <span class="token class-name">Member</span> member <span class="token operator">=</span> jpa<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token class-name">Member</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> memberId<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <br>
 <ul>
-<li>수정기능: “영속상태”에 있는 엔티티의 변경을 감지해, 트랙잭션이 커밋될 때 Update SQL문을 전달합니다.
+<li>수정기능: “영속상태”에 있는 엔티티의 변경을 감지해, <strong>트랙잭션이 커밋될 때 Update SQL문을 전달</strong>합니다.
 <ul>
-<li>“변경감지”란 EntityManager에서 엔티티를 영속할 때 Snapshot을 저장하고 트랜잭션 커밋 시 이와 비교하므로서 변경을 감지하는 동작이 가능합니다.  (CH3에서 본격적으로 다룬다.)</li>
+<li><strong>“변경감지”란</strong> EntityManager에서 <strong>엔티티를 영속할 때 Snapshot을 저장하고 트랜잭션 커밋 시 이와 비교하므로서 변경을 감지하는 동작</strong>이 가능합니다.  (CH3에서 본격적으로 다룬다.)</li>
 </ul>
 </li>
 </ul>
@@ -175,7 +175,7 @@ member<span class="token punctuation">.</span><span class="token function">setTe
 <span class="token class-name">String</span> teamName<span class="token operator">=</span> team<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <h1 id="패러다임-불일치-문제" style="position:relative;"><a href="#%ED%8C%A8%EB%9F%AC%EB%8B%A4%EC%9E%84-%EB%B6%88%EC%9D%BC%EC%B9%98-%EB%AC%B8%EC%A0%9C" aria-label="패러다임 불일치 문제 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>패러다임 불일치 문제</h1>
 <hr>
-<p>관계형 데이터베이스와  객체지향 프로그래밍 언어는 그 목적이 다른만큼 데이터의 기본 단위인 레코드와 객체의 기능과 표현 방법이 다릅니다. 따라서, 개발자가 이를 중간에서 해결해주어야 하지만, 이를 일일히 해결하는것은 너무 많은 리소스를 투입해야하는 작업입니다.</p>
+<p>관계형 데이터베이스와  객체지향 프로그래밍 언어는 그 목적이 다른만큼 데이터의 기본 단위인 <strong>레코드와 객체의 기능과 표현 방법이 다릅니다</strong>. 따라서, 개발자가 이를 중간에서 해결해주어야 하지만, 이를 일일히 해결하는것은 너무 많은 리소스를 투입해야하는 작업입니다.</p>
 <p>이같은 패러다임 불일치로 생기는 문제 또한 여러가지가 있으며, JPA가 어떤 방법으로 이를 해결하는지 살펴보겠습니다.</p>
 <h2 id="상속" style="position:relative;"><a href="#%EC%83%81%EC%86%8D" aria-label="상속 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>상속</h2>
 <p>객체의 경우 상속이라는 기능을 통해 다형성을 제공하지만, 대부분의 데이터베이스는 상속 기능이 없습니다.</p>
@@ -184,7 +184,7 @@ member<span class="token punctuation">.</span><span class="token function">setTe
 <p>위의 경우, 만약 ALBUM 객체를 저장하기 위해서는 두 개의 INSERT문이 필요합니다.</p>
 <div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ITEM<span class="token punctuation">(</span>ITEM_ID<span class="token punctuation">,</span> NAME<span class="token punctuation">,</span> PRICE<span class="token punctuation">,</span> DTYPE<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span>?<span class="token punctuation">,</span>?<span class="token punctuation">,</span>?<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> ALBUM<span class="token punctuation">(</span>ITEM_ID<span class="token punctuation">,</span>ARTIST<span class="token punctuation">)</span> <span class="token keyword">VALUES</span><span class="token punctuation">(</span>?<span class="token punctuation">,</span>?<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>만약 데이터베이스를 사용하지 않고 자바 컬렉션(Ex, ArrayList)에 저장한다면, **list.add(album)**처럼  부모 객체에 대해 고려하지 않고도 데이터를 저장할 수 있습니다.</p>
+<p>만약 데이터베이스를 사용하지 않고 자바 컬렉션(Ex, ArrayList)에 저장한다면, <strong>list.add(album)처럼</strong>  부모 객체에 대해 고려하지 않고도 데이터를 저장할 수 있습니다.</p>
 <p>이처럼 상속으로 인한 자바 객체와 관계형 데이터베이스 사이의 패러다임 불일치문제는 분명히 존재하는것을 알아보았습니다 .</p>
 <p>JPA에 상속하는 객체를 저장하면 상속에 의한 패러다임 불일치문제를 개발자 대신 해결해줍니다.</p>
 <p>JPA의 EntityManager에 객체를 저장하면, ITEM,ALBUM 테이블에 데이터를 각각 나누어 저장합니다.</p>
@@ -196,7 +196,8 @@ member<span class="token punctuation">.</span><span class="token function">setTe
 		<span class="token keyword">FROM</span> ITEM I 
 		<span class="token keyword">JOIN</span> ALBUM A <span class="token keyword">ON</span> A<span class="token punctuation">.</span>ITEM_ID <span class="token operator">=</span> I<span class="token punctuation">.</span>ITEM_ID<span class="token punctuation">;</span></code></pre></div>
 <h3 id="연관관계" style="position:relative;"><a href="#%EC%97%B0%EA%B4%80%EA%B4%80%EA%B3%84" aria-label="연관관계 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>연관관계</h3>
-<p>객체는 <strong>참조</strong>를 통해서 다른 객체와 연관관계를 가지고, <strong>참조에 접근</strong>을 통해 연관관계의 객체를 조회합니다. 반면 관계형 데이터베이스의 테이블은 <strong>외래 키</strong>를 통해 다른 테이블과 연관관계를 가지고, <strong>JOIN</strong>을 통해 연관된 테이블을 조회합니다.</p>
+<p><strong>객체는 참조를 통해서 다른 객체와 연관관계를 가지고</strong>, 참조에 접근하면서 연관관계의 객체를 조회합니다.</p>
+<p>반면 관계형 데이터베이스의 테이블은 <strong>외래 키를 통해 다른 테이블과 연관관계를 가지고,</strong> JOIN을 통해 연관된 테이블을 조회합니다.</p>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Member</span><span class="token punctuation">{</span>
 	<span class="token class-name">Team</span> team<span class="token punctuation">;</span>
 
