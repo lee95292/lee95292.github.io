@@ -295,43 +295,24 @@ order<span class="token punctuation">.</span><span class="token function">gerOrd
 </ul>
 <h3 id="챕터에-나오지-않지만-알아야하는-부분들" style="position:relative;"><a href="#%EC%B1%95%ED%84%B0%EC%97%90-%EB%82%98%EC%98%A4%EC%A7%80-%EC%95%8A%EC%A7%80%EB%A7%8C-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%98%EB%8A%94-%EB%B6%80%EB%B6%84%EB%93%A4" aria-label="챕터에 나오지 않지만 알아야하는 부분들 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>챕터에 나오지 않지만 알아야하는 부분들</h3>
 <ul class="contains-task-list">
-<li class="task-list-item">
-<p><input type="checkbox" disabled>  1. member.setName()만으로 데이터를 수정할 수 있는 개념인 “변경감지” 란 무엇인가?</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled>  2.member.getTeam()을 통해 연관객체를 불러올 수 있는 원리는 무엇인가?</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled>  3.JPA 구현체인 H2에서는 지연로딩을 구현하는 방법으로 무엇들이 있는가?</p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox" disabled>  4.JPA에서 같은 레코드에 대한 동일성을 보장하는 방법은 무엇인가?</p>
-<p>정답</p>
-<ol>
-<li>
-<p>패러다임 불일치 문제 → 계층분할 힘듦 → 코드 작업량 증가,</p>
-</li>
-<li>
-<p>상속, 연관관계 참조, 객체그래프 탐색,  비교 방법 불일치 문제</p>
-</li>
-<li>
-<p>생산성,유지보수, 성능, 벤더 독립성</p>
-</li>
-<li>
-<p>엔티티매니저에서 객체 영속 시 스냅샷을 저장하고,commit, JPQL등으로 인한 커밋 시, 스냅샷과 엔티티를 비교하는 방법</p>
-</li>
-<li>
-<p>지연로딩. 프록시객체를 가지고있다가 해당 객체가 사용되는 시점에 SQL 실행</p>
-</li>
-<li>
-<p>바이트코드 수정, 프록시</p>
-</li>
-<li>
-<p>엔티티매니저 1차캐시에 식별자 비교를 통해서 동일성 보장</p>
-</li>
-</ol>
-</li>
+<li class="task-list-item"><input type="checkbox" disabled>  1. member.setName()만으로 데이터를 수정할 수 있는 개념인 “변경감지” 란 무엇인가?</li>
+<li class="task-list-item"><input type="checkbox" disabled>  2.member.getTeam()을 통해 연관객체를 불러올 수 있는 원리는 무엇인가?</li>
+<li class="task-list-item"><input type="checkbox" disabled>  3.JPA 구현체인 H2에서는 지연로딩을 구현하는 방법으로 무엇들이 있는가?</li>
+<li class="task-list-item"><input type="checkbox" disabled>  4.JPA에서 같은 레코드에 대한 동일성을 보장하는 방법은 무엇인가?</li>
 </ul>
+<p>복습질문 정답</p>
+<ol>
+<li>패러다임 불일치 문제 → 계층분할 힘듦 → 코드 작업량 증가,</li>
+<li>상속, 연관관계 참조, 객체그래프 탐색,  비교 방법 불일치 문제</li>
+<li>생산성,유지보수, 성능, 벤더 독립성</li>
+</ol>
+<p>알아야하는 부분들 정답</p>
+<ol>
+<li>엔티티매니저에서 객체 영속 시 스냅샷을 저장하고,commit, JPQL등으로 인한 커밋 시, 스냅샷과 엔티티를 비교하는 방법</li>
+<li>지연로딩. 프록시객체를 가지고있다가 해당 객체가 사용되는 시점에 SQL 실행</li>
+<li>바이트코드 수정, 프록시</li>
+<li>엔티티매니저 1차캐시에 식별자 비교를 통해서 동일성 보장</li>
+</ol>
 <h2 id="referecnce" style="position:relative;"><a href="#referecnce" aria-label="referecnce permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Referecnce</h2>
 <ul>
 <li><a href="http://www.yes24.com/Product/Goods/90439472" target="_blank" rel="nofollow noopener noreferrer">자바 ORM 표준 JPA 프로그래밍</a></li>
