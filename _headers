@@ -9,7 +9,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /styles.d6c1202e2fdd9f651b8b.css
   Cache-Control: public, max-age=31536000, immutable
-/8cfbd7c72448a1af00d3bdb88439087de6f95e4f-eff9566795a8cfb47996.js
+/76881d462a3c8ef807b10231442b5f88d97f3688-9c603beef136fe813a23.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-all-category-tsx-54506622f9aeb19379f0.js
   Cache-Control: public, max-age=31536000, immutable
@@ -23,17 +23,21 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-404-tsx-99dbbcac454baffd4284.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-contact-tsx-2c8f101880c60b110e16.js
+/component---src-pages-contact-tsx-95bea91462aa5bc3b1c7.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-pages-index-tsx-6664b3a4e9e5e0fd525f.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-pages-old-index-tsx-202edc9f2f503fd34a51.js
+/component---src-pages-resume-jsx-20b3165cb971b11e4b44.js
   Cache-Control: public, max-age=31536000, immutable
-/webpack-runtime-a5ae1abb60a4aa1b6115.js
+/component---src-pages-sub-index-tsx-978b8d1a065fca304036.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-pages-sub-resume-jsx-0cbb2d564dfd0863aeec.js
+  Cache-Control: public, max-age=31536000, immutable
+/webpack-runtime-fb63fc61d8a99863b628.js
   Cache-Control: public, max-age=31536000, immutable
 /framework-67989501bd044d9f8b9c.js
   Cache-Control: public, max-age=31536000, immutable
-/app-f9203288178648c4d586.js
+/app-3f1b9b227538287963f6.js
   Cache-Control: public, max-age=31536000, immutable
 /static/*
   Cache-Control: public, max-age=31536000, immutable
