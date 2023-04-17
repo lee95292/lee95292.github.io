@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_typescirpt_power_blog=self.webpackChunkgatsby_starter_typescirpt_power_blog||[]).push([[899],{1660:function(e,t,r){r.r(t);var s=r(7294);t.default=function(){return(0,s.useEffect)((function(){window.location.href="/assets/resume/Resume_0417.pdf"})),s.createElement(s.Fragment,null)}}}]);
+//# sourceMappingURL=component---src-pages-resume-jsx-5be7fae833c5693b606c.js.map
