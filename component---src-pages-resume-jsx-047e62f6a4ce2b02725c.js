@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmglee_blog=self.webpackChunkmglee_blog||[]).push([[656],{1820:function(e,n,t){t.r(n),t.d(n,{Head:function(){return s}});var u=t(6540),l=t(1911),r=t(1989);n.default=function(){return(0,u.useEffect)(function(){window.location.replace("/assets/resume/Resume_05.pdf")},[]),null};var s=function(){return u.createElement(l.kW,{pathname:"/resume/",title:"Resume | "+r.A.siteTitle,noIndex:!0})}}}]);
+//# sourceMappingURL=component---src-pages-resume-jsx-047e62f6a4ce2b02725c.js.map
